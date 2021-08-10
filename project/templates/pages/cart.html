@@ -1,0 +1,80 @@
+{%include 'base.html'%}
+
+<div class=container>
+    <h2 class="mt-3" style="margin-bottom:20px;">محتويات العربة</h2>
+<div style="width:100%;overflow:auto">
+    <table class="table">
+
+  <thead>
+    <tr>
+      <th scope="col">المنتج</th>
+      <th scope="col">اسم المنتج</th>
+      <th scope="col">السعر</th>
+      <th scope="col">الكميه</th>
+      <th scope="col">الاجمالي</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr >
+      <th scope="row"><img src="/static/images/image4.jpeg" alt="thumbnail" style="width:100px;height:50px"/></th>
+      <td>اسم المنتج</td>
+      <td>120 جنيه</td>
+      <td>
+        
+        <a style="margin:0 6px;font-weight:800" >+</a>
+        <a style="margin-left:3px;font-weight:800">-</a>
+        2
+      </td>
+      <td>240 جنيه 
+      </td>
+    </tr>
+
+    <tr >
+        <th scope="row"><img src="/static/images/image1.jpg" alt="thumbnail" style="width:100px;height:50px"/></th>
+        <td>اسم المنتج</td>
+        <td>120 جنيه</td>
+        <td>
+          
+          <a style="margin:0 6px;font-weight:800" >+</a>
+          <a style="margin-left:3px;font-weight:800">-</a>
+          3
+        </td>
+        <td>360 جنيه 
+        </td>
+      </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="complete-purshace">
+    <div class="puchase-button">
+        <h6>التكلفة الاجمالية : 600 جنيه</h6>
+        <a href="{% url 'procced'%}" class="btn btn-dark">إتمام عملية الشراء</a>
+    </div>
+</div>
+  
+</div>
+
+
+  <style>
+    .complete-purshace .puchase-button {
+        text-align: left;
+    }
+    .complete-purshace .puchase-button a{
+        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid var(--primary);
+    }
+    a:hover,
+    .remove{
+     cursor: pointer
+    }
+    .remove{
+      color:black;
+      border:1px solid rgb(158, 156, 156);
+      border-radius:50%;
+      font-size:20px
+    }
+  </style>

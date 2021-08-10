@@ -1,0 +1,146 @@
+{%extends 'base.html' %} {%load static%} {%block content%}
+<div class="procced-cont">
+
+  <div class="container">
+
+    <div class="row" style="justify-content: space-between">
+        <div class="saved-address col-md-4" style="margin-top: 20px">
+            <h3>العناوين المسجله</h3>
+            <div class="bg-dark saved text-light"
+              style="padding: 5px; border-radius: 10px">
+              <div class="address-type">
+                <h6 style="display: inline-block">نوع العنوان</h6>
+                <p style="display: inline-block">منزل</p>
+              </div>
+              <div class="address-state">
+                <h6 style="display: inline-block">المحافظة</h6>
+                <p style="display: inline-block">القاهره</p>
+              </div>
+              <div class="address-area">
+                <h6 style="display: inline-block">المنقطة</h6>
+                <p style="display: inline-block">مصر الجديده</p>
+              </div>
+              <div class="address-street">
+                <h6 style="display: inline-block">الشارع</h6>
+                <p style="display: inline-block">المأمون</p>
+              </div>
+              <div class="address-bulding-number">
+                <h6 style="display: inline-block">رقم المبني</h6>
+                <p style="display: inline-block">115</p>
+              </div>
+              <div class="address-home-number">
+                <h6 style="display: inline-block">رقم الشقة</h6>
+                <p style="display: inline-block">6</p>
+              </div>
+              <div class="address-special">
+                <h6 style="display: inline-block">علامة مميزه</h6>
+                <p style="display: inline-block">بجوار كوك دور</p>
+              </div>
+
+              <div class="address-phone">
+                <h6 style="display: inline-block">رقم الموبايل</h6>
+                <p style="display: inline-block">01007260133</p>
+              </div>
+              <div class="option-buttons row"
+                style="justify-content: space-between"
+              >
+                <div class="Edit col-6">
+                  <button class="btn btn-primary w-100">تعديل العنوان</button>
+                </div>
+                <div class="Choose col-6">
+                  <button class="btn btn-success w-100">اختياره</button>
+                </div>
+              </div>
+
+            </div>
+    
+            <!-- 2 -->
+        </div>
+
+        <div class="bg-dark new-add-address col-md-7" style="border-radius:10px;margin-top: 20px;padding:10px 15px;">
+            <h3 class="text-light">إضافة عنوان جديد</h3>
+
+            <div class="type-and-state">
+                <div class="row" style="justify-content: space-between;">
+                    <div class="address-new-type col-sm-6 w-100">
+                        <input type="text" class="form-control" placeholder="نوع العنوان">
+                    </div>
+                    <div class="address-new-state col-sm-6 w-100">
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>المحافظة</option>
+                            <option value="1">القاهره</option>
+                            <option value="2">الجيزه</option>
+                            <option value="3">الاسكندرية</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="area-and-street">
+                <div class="address-new-area">
+                    <input type="text" class="form-control" placeholder="المنطقة">
+                </div>
+                <div class="address-new-street">
+                    <input type="text" class="form-control" placeholder="الشارع">
+                </div>
+            </div>
+
+            <div class="building-and-home">
+
+                <div class="row ">
+                    <div class="address-new-building col-sm-6">
+                        <input type="text" class="form-control" placeholder="رقم المبني او اسم المبني">
+                    </div>
+                    <div class="address-new-home col-sm-6">
+                        <input type="text" class="form-control" placeholder="رقم المنزل">
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="special-and-phone">
+                <div class="address-new-special">
+                    <input type="text" class="form-control" placeholder="علامة مميزة ">
+                </div>
+                <div class="address-new-phone">
+                    <input type="text" class="form-control" placeholder="رقم الهاتف">
+                </div>
+            </div>
+            
+            <div class="confirm-address">
+                <div class="confirm-button" style="text-align: center;">
+                    <a  href="{% url 'loginPage' %}" class="btn btn-primary w-50">إضافة العنوان وتأكيد الطلب</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<style>
+  .saved-address .saved div > h6 {
+    width: 100px;
+  }
+
+  .saved-address .saved div:not(:last-child, :nth-child(8)) {
+    border-bottom: 1px solid var(--yellow);
+  }
+  
+.address-special{
+    border-bottom: 1px solid var(--yellow);
+}
+  .Edit {
+    border: none !important;
+  }
+
+.type-and-state,
+.building-and-home{
+    margin: 20px 0;
+}
+.area-and-street >div{
+    margin-bottom:20px;
+}
+.special-and-phone >div{
+margin-bottom: 20px;
+}
+</style>
+{%endblock%}

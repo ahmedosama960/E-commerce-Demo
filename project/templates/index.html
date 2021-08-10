@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+{%block content%}
+<!--start of search -->
+{% include 'parts/search.html' %}
+<!-- END of search -->
+<!-- Start of categories -->
+{% include 'parts/categories.html' %}
+<!-- End of categories -->
+
+<div class="container">
+    <!-- start of slidebar -->
+    <div class="row coursels">
+        <div class="col-sm-6 col-md-4">
+            <div class="title" >
+                <h3>البانيوهات</h3>
+            </div>
+            {%include 'products/slidebar.html' with carousel_number='carousel1' price='450' discount='550' category='البانيوهات' %}
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="title">
+                <h3>الشاورز</h3>
+            </div>
+            {%include 'products/slidebar.html' with carousel_number='carousel2' price='230' discount='280' category='الشاورز' %}
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="title">
+                <h3>الاحواض</h3>
+            </div>
+            {%include 'products/slidebar.html' with carousel_number='carousel3'  price='100' discount='150' category='الاحواض' %}
+        </div>
+    </div>
+    <!-- End of slidebar -->
+    <hr>
+    <!-- Start of best sellers -->
+    <div class="best-sales">
+        <div class="container">
+            <div class="title">
+                <h3>الاكثر مبيعاَ</h3>
+            </div>
+            <div class="products">
+                <!-- Start of card -->
+                    <div class="row">
+                        {%include 'products/bestSales.html' %}
+                    </div>
+                <!-- End of card -->
+            </div>
+        </div>
+    </div>    
+
+    <!-- End of besr sellers -->
+</div>
+<!-- End of slidebar -->
+{%endblock%}

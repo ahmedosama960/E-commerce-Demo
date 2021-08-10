@@ -1,0 +1,62 @@
+{%load static%}
+{%include 'base.html' %}
+{%block content%}
+<div class="container">
+    <div class="details-cont row">
+            <div class="product-image col-md-8">
+                <img src='{% static "images/image1.jpg"%}' alt='...'>
+            </div>
+            <div class="product-indetails col-md-3">
+            <div class="product-price">
+                <h5>سعر المنتج </h5>
+                <p>105جنيه</p>
+            </div>
+            <div class="product-desc">
+                <h5>وصف المنتج</h5>
+                <p>الوصف الاول الممكن لهذا المنتج</p>
+                <p>يمكننا اضافه اكثر من وصف للمنتج</p>
+                <p>و هنا ايضا يمكن الوصف خصيصا لشئ</p>
+            </div> 
+            <div class="add-to-cart">
+                <input class="form-control" type='number' min=1 max=10 value="1" >
+                <button class="btn-dark">أضف الي السله</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .details-cont{
+        margin-top: 20px;
+    }
+    .details-cont .add-to-cart button{
+        border-radius: 5px;
+        height:calc(1.5em + 0.75rem + 2px);
+        border: 1px solid var(--primary);
+    }
+    .details-cont .add-to-cart input{
+        width:100px;
+        display: inline-block;
+        padding: 5px;
+    }
+    .product-image{
+        height: 400px;
+        
+       
+    }
+    .product-image img{
+        width: 100%;
+        max-height: 100%;
+        border-radius: 5px;
+    }
+    p{
+        color: #007bff;
+        font-weight: bold;
+    }
+    h5{
+        color: var(--dark);
+    }
+</style>
+
+{%endblock%}

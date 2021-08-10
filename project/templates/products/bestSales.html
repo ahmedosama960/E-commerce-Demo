@@ -1,0 +1,82 @@
+{%load static%} {%block bestSales%}
+<div class="cardM col-5 col-sm-4 col-md-3">
+  <img class="cardMimage" alt="..." src="{% static 'images/image1.jpg' %}" />
+  <div class="product-details">
+    <div class="product-title">
+      <h4>اسم المنتج</h4>
+    </div>
+    <div class="desc">
+      <p>واحد من افضل المنتجات المتواجده بالسوق المصري</p>
+    </div>
+    <div class="price">
+      <h5>
+        {{price}} 150 جنيه | <span class="discount">{{discount}} 180 جنيه</span>
+      </h5>
+    </div>
+  </div>
+  <button class="seeMore-button">
+    <a href="{% url 'product_details' %}" class="routers"> مزيد من التفاصيل </a>
+  </button>
+</div>
+
+<div class="cardM col-5 col-sm-4 col-md-3">
+  <img class="cardMimage" alt="..." src="{% static 'images/image2.jpg' %}" />
+  <div class="product-details">
+    <div class="product-title">
+      <h4>اسم المنتج</h4>
+    </div>
+    <div class="desc">
+      <p>واحد من افضل المنتجات المتواجده بالسوق المصري</p>
+    </div>
+    <div class="price">
+      <h5>
+        {{price}} 150 جنيه | <span class="discount">{{discount}} 180 جنيه</span>
+      </h5>
+    </div>
+  </div>
+  <button class="seeMore-button">
+    <a href="{% url 'product_details' %}" class="routers"> مزيد من التفاصيل </a>
+  </button>
+</div>
+
+<div class="cardM col-5 col-sm-4 col-md-3">
+  <img class="cardMimage" alt="..." src="{% static 'images/image4.jpeg' %}" />
+  <div class="product-details">
+    <div class="product-title">
+      <h4>اسم المنتج</h4>
+    </div>
+    <div class="desc">
+      <p>واحد من افضل المنتجات المتواجده بالسوق المصري</p>
+    </div>
+    <div class="price">
+      <h5>
+        {{price}} 150 جنيه | <span class="discount">{{discount}} 180 جنيه</span>
+      </h5>
+    </div>
+  </div>
+  <button class="seeMore-button">
+    <a href="#" class="routers"> مزيد من التفاصيل </a>
+  </button>
+</div>
+
+
+<div class="cardM col-5 col-sm-4 col-md-3">
+  <img class="cardMimage" alt="..." src="{% static 'images/image3.jpg' %}" />
+  <div class="product-details">
+    <div class="product-title">
+      <h4>اسم المنتج</h4>
+    </div>
+    <div class="desc">
+      <p>واحد من افضل المنتجات المتواجده بالسوق المصري</p>
+    </div>
+    <div class="price">
+      <h5>
+        {{price}} 150 جنيه | <span class="discount">{{discount}} 180 جنيه</span>
+      </h5>
+    </div>
+  </div>
+  <button class="seeMore-button">
+    <a href="{% url 'product_details' %}" class="routers"> مزيد من التفاصيل </a>
+  </button>
+</div>
+{%endblock%}

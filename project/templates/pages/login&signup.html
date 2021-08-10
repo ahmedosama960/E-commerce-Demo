@@ -1,0 +1,112 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="form">
+    <h2 class="text-dark">تسجيل الدخول</h2>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="form-fields">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text email-span" id="basic-addon1"
+                  ><i class="fas fa-fingerprint"></i
+                ></span>
+              </div>
+          <input
+            class="form-control email-field"
+            type="text"
+            placeholder="البريد الالكتروني او اسم المستخدم"
+            name="username"
+          />
+          
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text password-span" id="basic-addon1">
+              <i class="fas fa-key"></i
+            ></span>
+          </div>
+          <input
+            class="form-control password-field"
+            type="password"
+            placeholder="كلمة السر"
+            name="password"
+          />
+        </div>
+        <a href="#" style="margin:1px 0;">هل نسيت كلمة السر ؟</a>
+        <div class="social-media-login">
+            <div class="row" style="justify-content:space-evenly;margin:15px 0">
+                <div class="facebook-login col-sm-9 mb-3">
+                    <a class="btn btn-dark w-100"><span></span><span>تسجيل بواسطة  جوجل</span> <i class="fab fa-google"></i></a>
+                </div>
+                <div class="facebook-login col-sm-9 ">
+                    <a class="btn btn-primary w-100"><span></span><span>تسجيل بواسطة  فيسبوك</span> <i class="fab fa-facebook text-light"></i></a>
+                </div>
+
+            </div>
+        </div>
+        <input class="btn btn-warning mt-2" type="submit" id="" value="تسجيل الدخول" style="display: block;margin-top:3px; margin-bottom: 5px;"/>
+        <a href="#" style="margin-top: -5px;">إنشاء حساب</a>
+      </div>
+    </form>
+    <div class="contact">
+      <h3>تواصل معنا</h3>
+      <span><i class="fab fa-facebook fa-2x text-primary"></i></span>
+      <span><i class="fab fa-twitter fa-2x text-primary"></i></span>
+    </div>
+  </div>
+  <!-- end of form -->
+  
+  <style>
+    #form {
+        color: #d0dddd;
+        text-transform: none;
+    }
+    #form:hover {
+        color: #fff;
+        text-transform: none;
+    }
+    .form {
+        width: 400px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        box-shadow: 5px 10px 18px #bbbbbb;
+        margin-top: 25px;
+        margin:25px auto;
+    }
+    .form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .form .form-fields > input {
+        margin-bottom: 20px;
+    }
+    .form .contact {
+        text-align: center;
+    }
+    .contact h3 {
+        margin-top: 20px;
+    }
+    .contact span {
+        margin-right: 10px;
+    }
+
+    .email-field,
+    .password-field
+    {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        border-top-left-radius: 5px !important;
+        border-bottom-left-radius: 5px !important;
+    }
+    .email-span,
+    .password-span{
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: 5px !important;
+        border-bottom-right-radius: 5px !important;
+    }
+</style>
+{%endblock%}
+
+

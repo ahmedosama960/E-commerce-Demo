@@ -1,0 +1,63 @@
+{%block slidebar%}
+    <div id="{{carousel_number}}" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators" style="  flex-direction: row-reverse;">
+            <li data-target="#{{carousel_number}}" data-slide-to="0" class="active"></li>
+            <li data-target="#{{carousel_number}}" data-slide-to="1"></li>
+            <li data-target="#{{carousel_number}}" data-slide-to="2"></li>
+            <li data-target="#{{carousel_number}}" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item itemOne active">
+                <div class="carousel-caption d-md-block">
+                    <div class="price">
+                        <h5>{{price}} جنيه | <span class="discount">{{discount}} جنيه</span></h5>
+                    </div>
+                    <div class="desc">
+                        <p>واحدة من افضل المنتجات في السوق المصري اليوم</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item itemTwo">
+                <div class="carousel-caption  d-md-block">
+                    <div class="price">
+                        <h5>{{price}} جنيه | <span class="discount">{{discount}} جنيه</span></h5>
+                    </div>
+                    <div class="desc">
+                        <p>واحدة من افضل المنتجات في السوق المصري اليوم</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item itemThree">
+                <div class="carousel-caption  d-md-block">
+                    <div class="price">
+                        <h5>{{price}}جنيه | <span class="discount">{{discount}} جنيه</span></h5>
+                    </div>
+                    <div class="desc">
+                        <p>واحدة من افضل المنتجات في السوق المصري اليوم</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item itemFour">
+                <div class="overlay">
+                </div>
+                <div class="carousel-caption d-md-block">
+                    <h5>تصفح جميع المنتجات المتواجده بقائمة <span style="color: red;">{{category}}</span></h5>
+                    <div>
+                        <span class="show-icon"><i class="fas fa-eye fa-4x "></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#{{carousel_number}}" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#{{carousel_number}}" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+{%endblock%}
